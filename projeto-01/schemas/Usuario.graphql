@@ -1,0 +1,15 @@
+type Usuario {
+  id: ID!
+  nome: String!
+  email: String!
+  idade: Int
+  salario: Float
+  vip: Boolean
+  perfil_id: Int
+  perfil: Perfil
+}
+
+type Perfil {
+  id: ID!
+  perfil: String!
+}
