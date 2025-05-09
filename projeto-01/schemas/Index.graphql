@@ -9,6 +9,8 @@ type Produto{
     desconto: Float!
     precoComDesconto: Float!
 }
+
+
 # Pontos de entrada da API
 type Query{
     ola: String,
