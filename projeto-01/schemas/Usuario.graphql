@@ -6,7 +6,8 @@ enum Perfil{
 
 enum UsuarioStatus{
     ATIVO,
-    INATIVO
+    INATIVO,
+    BLOQUEADO
 }
 
 

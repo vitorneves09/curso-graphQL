@@ -1,5 +1,6 @@
 const { usuarios, perfis } = require('../data/db');
 
+
 module.exports = {
     ola: () => "Hello world!",
     horaAtual: () => new Date(),
@@ -19,7 +20,7 @@ module.exports = {
     }),
     numerosMegaSena: () => Array(6).fill(0).map(() => Math.floor(Math.random() * 60) + 1).sort((a, b) => a - b),
     usuarios: () => usuarios,
-    usuario: (_, { id }) => usuarios.find(usuario => usuario.id === id) || null,
+    usuario: (_, { id }) => usuarios.find(usuario => usuario.id === parseInt(id)) || null,
     perfis: () => perfis,
     perfil: (_, { id }) => perfis.find(perfil => perfil.id === id) || null
   }
