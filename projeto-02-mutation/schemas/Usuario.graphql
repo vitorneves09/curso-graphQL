@@ -1,0 +1,29 @@
+
+enum Perfil{
+    ADMIN,
+    COMUM
+}
+
+enum UsuarioStatus{
+    ATIVO,
+    INATIVO,
+    BLOQUEADO
+}
+
+
+type Usuario {
+  id: ID!
+  nome: String!
+  email: String!
+  idade: Int
+  salario: Float
+  vip: Boolean
+  perfil_id: Int
+  perfil: Perfil
+  status: UsuarioStatus
+}
+
+type Perfil {
+  id: ID!
+  perfil: Perfil!
+}
