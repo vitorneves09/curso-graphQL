@@ -12,12 +12,6 @@ module.exports = {
       salario_real: 1000.50,
       vip: true
     }),
-    produto: () => ({
-      id: 1,
-      nome: "Produto 1",
-      preco: 100,
-      desconto: 0.1
-    }),
     numerosMegaSena: () => Array(6).fill(0).map(() => Math.floor(Math.random() * 60) + 1).sort((a, b) => a - b),
     usuarios: () => usuarios,
     usuario: (_, { id }) => usuarios.find(usuario => usuario.id === parseInt(id)) || null,

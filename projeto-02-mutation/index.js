@@ -4,7 +4,7 @@ const { mergeTypeDefs, mergeResolvers } = require('@graphql-tools/merge');
 const { loadTypedefsSync } = require('@graphql-tools/load');
 const { GraphQLFileLoader } = require('@graphql-tools/graphql-file-loader');
 
-const { Query, Usuario, Produto } = require('./resolvers');
+const { Query, Usuario } = require('./resolvers');
 
 // Carregamento e merge de typeDefs
 const loadedTypeDefs = loadTypedefsSync('./schemas/Index.graphql', {
@@ -17,8 +17,7 @@ const typeDefs = mergeTypeDefs(loadedTypeDefs.map(source => source.document));
 const resolvers = mergeResolvers([
     {
         Query,
-        Usuario,
-        Produto
+        Usuario
     }
 ]);
 

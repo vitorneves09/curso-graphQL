@@ -2,21 +2,11 @@
 
 scalar Date
     
-type Produto{
-    id: ID!
-    nome: String!   
-    preco: Float!
-    desconto: Float!
-    precoComDesconto: Float!
-}
-
-
 # Pontos de entrada da API
 type Query{
     ola: String,
     horaAtual: Date,
     usuarioLogado: Usuario,
-    produto: Produto,
     numerosMegaSena:[Int!]!,
     usuarios: [Usuario!]!,
     usuario(id: ID!): Usuario,
