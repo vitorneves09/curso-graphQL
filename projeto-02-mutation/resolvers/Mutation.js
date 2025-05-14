@@ -12,5 +12,11 @@ module.exports = {
         usuarios.push(novo);
 
         return novo
+    },
+    deletarUsuario(_, { id }) {
+        const usuarioIndex = usuarios.findIndex(usuario => usuario.id === id);
+       
+        const usuarioRemovido = usuarios.splice(usuarioIndex, 1);
+        return usuarioRemovido[0];
     }
 };
