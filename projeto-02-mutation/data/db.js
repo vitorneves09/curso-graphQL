@@ -19,5 +19,6 @@ const usuarios = [
 
 module.exports = {
   usuarios,
-  perfis
+  perfis,
+  proximoId
 };

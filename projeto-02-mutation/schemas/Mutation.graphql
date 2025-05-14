@@ -1,3 +1,5 @@
-type Mutation{
-    novoUsuario(nome: String!, email:String!, idade: Int)
+#import Usuario from "./Usuario.graphql"
+
+type Mutation {
+  novoUsuario(nome: String!, email: String!, idade: Int): Usuario
 }

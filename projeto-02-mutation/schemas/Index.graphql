@@ -1,4 +1,5 @@
 #import Usuario, Perfil from "./Usuario.graphql"
+#import Mutation from "./Mutation.graphql"
 
 scalar Date
     
@@ -13,3 +14,5 @@ type Query{
     perfis: [Perfil!]!
     perfil(id: ID!): Perfil
 }
+
+type Mutation
